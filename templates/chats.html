@@ -1,0 +1,46 @@
+<div class="chat-box">
+  <div class="result-messages">
+    {% for message in messages %} {% if message.sender == "user" %}
+    <div class="mine messages">
+      {% if message.mtype == "list" %} {% for item in message.message %}
+      <div class="message last shadow-sm">{{item}}</div>
+      {%endfor%} {%else%}
+      <div class="message last shadow-sm">{{message.message}}</div>
+      {%endif%}
+    </div>
+    {% else %}
+    <div class="yours messages">
+      {% if message.mtype == "list" %} {% for item in message.message %}
+      <div class="message last shadow-sm">{{item}}</div>
+      {%endfor%} {%else%}
+      <div class="message last shadow-sm">{{message.message}}</div>
+      {%endif%}
+    </div>
+    {% endif %} {%endfor%}
+  </div>
+  <form action="/chats" method="post" id="query-form" class="query">
+    <div class="input-group mb-3 shadow-sm">
+      <input
+        autofocus
+        type="text"
+        name="query"
+        id="query"
+        class="form-control shadow-none"
+        placeholder="Type a message"
+        aria-label="Type a message"
+        aria-describedby="basic-addon1"
+      />
+      <button type="submit" class="input-group-text" id="basic-addon1">
+        <img
+          src="{{url_for('static',filename='assets/send.svg')}}"
+          alt="send-btn"
+        />
+      </button>
+    </div>
+  </form>
+  <div class="suggestions">
+    <span class="badge rounded-pill bg-secondary">Secondary</span
+    ><span class="badge rounded-pill bg-secondary">Secondary</span
+    ><span class="badge rounded-pill bg-secondary">Secondary</span>
+  </div>
+</div>

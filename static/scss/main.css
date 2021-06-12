@@ -43,8 +43,8 @@ body .character .wrapper .background-circle {
   -webkit-mask-image: radial-gradient(#bada55, #bada55);
           mask-image: radial-gradient(#bada55, #bada55);
   -ms-mask-image: -webkit-radial-gradient(#bada55, #bada55);
-  animation: grow 0.7s 1 ease;
-  -webkit-animation: grow 0.7s 1 ease;
+  animation: grow 0 1 ease;
+  -webkit-animation: grow 0 1 ease;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -66,18 +66,18 @@ body .character .wrapper .border-circlee {
 }
 
 body .character .wrapper .border-circlee#one {
-  -webkit-animation: border-pulse 1s 3.1s ease;
-          animation: border-pulse 1s 3.1s ease;
+  -webkit-animation: border-pulse 1s 0.1s ease;
+          animation: border-pulse 1s 0.1s ease;
   animation-fill-mode: forwards;
-  -webkit-animation: border-pulse 1s 3.1s infinite ease;
+  -webkit-animation: border-pulse 1s 0.1s infinite ease;
   -webkit-animation-fill-mode: forwards;
 }
 
 body .character .wrapper .border-circlee#two {
-  -webkit-animation: border-pulse 1s 3.3s 1 ease;
-          animation: border-pulse 1s 3.3s 1 ease;
+  -webkit-animation: border-pulse 1s 0.3s 1 ease;
+          animation: border-pulse 1s 0.3s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: border-pulse 1s 3.3s 1 infinite ease;
+  -webkit-animation: border-pulse 1s 0.3s 1 infinite ease;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -89,9 +89,9 @@ body .character .wrapper .body {
   border-radius: 100px;
   position: relative;
   top: 200px;
-  animation: body-enter 0.7s 0.2s 1 ease;
+  animation: body-enter 0.1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: body-enter 0.7s 0.2s 1 ease;
+  -webkit-animation: body-enter 0.1s 1 ease;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: scale(0) translateZ(0);
   transform: scale(0) translateZ(0);
@@ -116,9 +116,9 @@ body .character .wrapper .hair-main {
   border-radius: 54px 54px 0px 0px;
   margin-left: -12px;
   margin-top: -10px;
-  animation: hair-anim 0.7s 0.9s 1 ease;
+  animation: hair-anim 0.1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: hair-anim 0.7s 0.9s 1 ease;
+  -webkit-animation: hair-anim 0.1s 1 ease;
   -webkit-animation-fill-mode: forwards;
   position: relative;
   z-index: 2;
@@ -137,8 +137,8 @@ body .character .wrapper .hair-top {
   -webkit-transform: translateX(-64px);
   transform-origin: right;
   -webkit-transform-origin: right;
-  animation: hair-top-anim 0.7s 1s 1 ease;
-  -webkit-animation: hair-top-anim 0.7s 1s 1 ease;
+  animation: hair-top-anim 0.1s 1 ease;
+  -webkit-animation: hair-top-anim 0.1s 1 ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -156,8 +156,8 @@ body .character .wrapper .hair-bottom {
   -webkit-transform: translateX(-27px);
   transform-origin: left;
   -webkit-transform-origin: left;
-  animation: hair-bottom-anim 0.7s 1.4s 1 ease;
-  -webkit-animation: hair-bottom-anim 0.7s 1.4s 1 ease;
+  animation: hair-bottom-anim 0.1s 1 ease;
+  -webkit-animation: hair-bottom-anim 0.1s 1 ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -169,9 +169,9 @@ body .character .wrapper .sideburn {
   position: absolute;
   bottom: -25px;
   opacity: 0;
-  animation: sideburn-anim 0.7s 0.9s 1 ease;
+  animation: sideburn-anim 0.1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: sideburn-anim 0.7s 0.9s 1 ease;
+  -webkit-animation: sideburn-anim 0.1s 1 ease;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -191,9 +191,9 @@ body .character .wrapper .face {
   position: absolute;
   top: 40px;
   left: 8px;
-  animation: hair-anim 0.1s 0.8s 1 linear;
+  animation: hair-anim 0s 1 linear;
   animation-fill-mode: forwards;
-  -webkit-animation: hair-anim 0.1s 0.8s 1 linear;
+  -webkit-animation: hair-anim 0s 1 linear;
   -webkit-animation-fill-mode: forwards;
   z-index: 3;
 }
@@ -208,9 +208,9 @@ body .character .wrapper .nose {
   left: 50%;
   top: 80px;
   margin-left: -20px;
-  animation: shadow-anim 0.7s 3s 1 ease;
+  animation: shadow-anim 0.1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: shadow-anim 0.7s 3s 1 ease;
+  -webkit-animation: shadow-anim 0.1s 1 ease;
   -webkit-animation-fill-mode: forwards;
   opacity: 0;
   z-index: 5;
@@ -223,9 +223,10 @@ body .character .wrapper .ear {
   border-radius: 12px;
   position: absolute;
   top: 116px;
-  animation: grow 0.7s 1.3s 1 ease;
+  -webkit-animation: grow 0 1 ease;
+          animation: grow 0 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: grow 0.7s 1.3s 1 ease;
+  -webkit-animation: grow 0s 1 ease;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -240,9 +241,9 @@ body .character .wrapper .mouth {
   top: 150px;
   left: 50%;
   margin-left: -33px;
-  animation: grow 0.7s 2.6s 1 ease;
+  animation: grow 0s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: grow 0.7s 2.6s 1 ease;
+  -webkit-animation: grow 0s 1 ease;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -263,9 +264,9 @@ body .character .wrapper .eye-shadow {
   background: rgba(149, 36, 0, 0.1);
   position: absolute;
   top: 70px;
-  animation: grow 0.7s 2s 1 ease;
+  animation: grow 0s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: grow 0.7s 2s 1 ease;
+  -webkit-animation: grow 0s 1 ease;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -294,16 +295,17 @@ body .character .wrapper .eyebrow {
 }
 
 body .character .wrapper .eye-shadow#left .eyebrow {
-  animation: eyebrow-anim-left 0.7s 2.2s 1 ease;
+  -webkit-animation: eyebrow-anim-left 0.7s 1 ease;
+          animation: eyebrow-anim-left 0.7s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: eyebrow-anim-left 0.7s 2.2s 1 ease;
+  -webkit-animation: eyebrow-anim-left 0.1s 1 ease;
   -webkit-animation-fill-mode: forwards;
 }
 
 body .character .wrapper .eye-shadow#right .eyebrow {
-  animation: eyebrow-anim-right 0.7s 2.2s 1 ease, eyebrow-raise 2s 6.6s infinite alternate ease-in-out;
+  animation: eyebrow-anim-right 0.1s 1 ease, eyebrow-raise 2s infinite alternate ease-in-out;
   animation-fill-mode: forwards;
-  -webkit-animation: eyebrow-anim-right 0.7s 2.2s 1 ease, eyebrow-raise 2s 6.6s infinite alternate ease-in-out;
+  -webkit-animation: eyebrow-anim-right 0.1s 1 ease, eyebrow-raise 2s infinite alternate ease-in-out;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -316,9 +318,9 @@ body .character .wrapper .eye {
   top: -18px;
   left: 50%;
   margin-left: -10px;
-  animation: grow 0.7s 2.2s 1 ease, eye-blink 4s 4.4s infinite linear;
+  animation: grow 0.1s 1 ease, eye-blink 4s 4.4s infinite linear;
   animation-fill-mode: forwards;
-  -webkit-animation: grow 0.7s 2.2s 1 ease, eye-blink 4s 4.4s infinite linear;
+  -webkit-animation: grow 0.1s 1 ease, eye-blink 4s 4.4s infinite linear;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -344,9 +346,9 @@ body .character .wrapper .shadow {
   position: absolute;
   z-index: 4;
   opacity: 0;
-  animation: shadow-anim 1s 2.8s 1 ease;
+  animation: shadow-anim 1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: shadow-anim 1s 2.8s 1 ease;
+  -webkit-animation: shadow-anim 1s 1 ease;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -357,9 +359,9 @@ body .character .wrapper .triangle-light {
   opacity: 0.2;
   position: absolute;
   right: -65%;
-  animation: triangle-light-anim 1s 2.8s 1 ease;
+  animation: triangle-light-anim 1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: triangle-light-anim 1s 2.8s 1 ease;
+  -webkit-animation: triangle-light-anim 1s 1 ease;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: translate(200px, 0px);
   transform: translate(200px, 0px);
@@ -373,9 +375,9 @@ body .character .wrapper .triangle-dark {
   position: absolute;
   left: -60%;
   top: 30%;
-  animation: triangle-dark-anim 1s 3s 1 ease;
+  animation: triangle-dark-anim 1s 1 ease;
   animation-fill-mode: forwards;
-  -webkit-animation: triangle-dark-anim 1s 3s 1 ease;
+  -webkit-animation: triangle-dark-anim 1s 1 ease;
   -webkit-animation-fill-mode: forwards;
   -webkit-transform: translate(-200px, 0px);
   transform: translate(-200px, 0px);
@@ -425,44 +427,44 @@ body .character .wrapper .shirt-text {
 }
 
 body .character .wrapper .shirt-text:nth-of-type(1) {
-  animation: text-anim 0.7s 3s 1 ease;
-  -webkit-animation: text-anim 0.7s 3s 1 ease;
+  animation: text-anim 0.7s 0.1s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.1s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(2) {
   color: #ef4136;
-  animation: text-anim 0.7s 3.1s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.1s 1 ease;
+  animation: text-anim 0.7s 0.1s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.1s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(3) {
-  animation: text-anim 0.7s 3.2s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.2s 1 ease;
+  animation: text-anim 0.7s 0.2s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.2s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(4) {
-  animation: text-anim 0.7s 3.3s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.3s 1 ease;
+  animation: text-anim 0.7s 0.3s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.3s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(5) {
-  animation: text-anim 0.7s 3.4s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.4s 1 ease;
+  animation: text-anim 0.7s 0.4s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.4s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(6) {
-  animation: text-anim 0.7s 3.4s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.4s 1 ease;
+  animation: text-anim 0.7s 0.5s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.5s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(7) {
-  animation: text-anim 0.7s 3.4s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.4s 1 ease;
+  animation: text-anim 0.7s 0.6s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.6s 1 ease;
 }
 
 body .character .wrapper .shirt-text:nth-of-type(8) {
-  animation: text-anim 0.7s 3.4s 1 ease;
-  -webkit-animation: text-anim 0.7s 3.4s 1 ease;
+  animation: text-anim 0.7s 0.7s 1 ease;
+  -webkit-animation: text-anim 0.7s 0.7s 1 ease;
 }
 
 body h2 {
@@ -493,9 +495,9 @@ body .chat-box .result-messages {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 body .chat-box .result-messages .messages {
@@ -605,12 +607,12 @@ body .chat-box .query input {
   outline: none;
 }
 
-body .chat-box .query span {
+body .chat-box .query button {
   padding: 0.5 4rem;
   border-radius: 0.5rem;
 }
 
-body .chat-box .query span img {
+body .chat-box .query button img {
   width: 25px;
   height: 25px;
 }
