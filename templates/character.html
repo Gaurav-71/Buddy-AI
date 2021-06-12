@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddy AI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='scss/main.css')}}"
+    />
+    <!-- <link rel="stylesheet" href="../static/scss/main.css" /> -->
+  </head>
+  <body>
+    <div class="character">
+      <div class="wrapper">
+        <div class="border-circlee" id="one"></div>
+        <div class="border-circlee" id="two"></div>
+        <div class="background-circle">
+          <div class="triangle-light"></div>
+          <div class="body"></div>
+          <span class="shirt-text">I</span>
+          <span class="shirt-text">♥</span>
+          <span class="shirt-text">U</span>
+          <span class="shirt-text">N</span>
+          <span class="shirt-text">I</span>
+          <span class="shirt-text">S</span>
+          <span class="shirt-text">Y</span>
+          <span class="shirt-text">S</span>
+          <div class="triangle-dark"></div>
+        </div>
+        <div class="head">
+          <div class="ear" id="left"></div>
+          <div class="ear" id="right"></div>
+          <div class="hair-main">
+            <div class="sideburn" id="left"></div>
+            <div class="sideburn" id="right"></div>
+            <div class="hair-top"></div>
+          </div>
+          <div class="face">
+            <div class="hair-bottom"></div>
+            <div class="nose"></div>
+            <div class="eye-shadow" id="left">
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="eye-shadow" id="right">
+              <div class="eyebrow"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+            <div class="shadow-wrapper">
+              <div class="shadow"></div>
+            </div>
+          </div>
+
+          <!-- <span class="music-note" id="one">!?</span>
+      <span class="music-note" id="two">🌐</span> -->
+        </div>
+      </div>
+    </div>
+    {% block body %}{% endblock %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
