@@ -12,6 +12,11 @@
     <div class="yours messages">
       {% if message.mtype == "list" %} {% for item in message.message %}
       <div class="message last shadow-sm">{{item}}</div>
+      {%endfor%} {%elif message.mtype == "link" %} {% for link in
+      message.message %}
+      <a href="{{link.link}}" class="message last shadow-sm" target="_blank"
+        >{{link.text}}</a
+      >
       {%endfor%} {%else%}
       <div class="message last shadow-sm">{{message.message}}</div>
       {%endif%}
@@ -73,6 +78,7 @@
       name="b4"
       value="Latest News"
       class="badge rounded-pill bg-secondary shadow-sm"
+      onclick="loading();"
     >
       Latest News
     </button>
@@ -82,7 +88,7 @@
       value="Nearby Restaurants"
       class="badge rounded-pill bg-secondary shadow-sm"
     >
-      Nearby Restaurants
+      Nearby Cafes
     </button>
     <button
       type="submit"
