@@ -604,9 +604,43 @@ body {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      span {
+      a {
+        margin-right: 1rem;
+      }
+      button {
+        cursor: pointer;
+        background-image: repeating-linear-gradient(
+            90deg,
+            hsla(69, 0%, 61%, 0.05) 0px,
+            hsla(69, 0%, 61%, 0.05) 1px,
+            transparent 1px,
+            transparent 104px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            hsla(69, 0%, 61%, 0.05) 0px,
+            hsla(69, 0%, 61%, 0.05) 1px,
+            transparent 1px,
+            transparent 104px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            hsla(69, 0%, 61%, 0.08) 0px,
+            hsla(69, 0%, 61%, 0.08) 1px,
+            transparent 1px,
+            transparent 13px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            hsla(69, 0%, 61%, 0.08) 0px,
+            hsla(69, 0%, 61%, 0.08) 1px,
+            transparent 1px,
+            transparent 13px
+          ),
+          linear-gradient(45deg, rgb(4, 4, 4), rgb(79, 79, 79));
         margin-right: 1rem;
         padding: 0.75rem 2rem;
+        border: none;
       }
       // background: gray;
     }
@@ -630,6 +664,18 @@ body {
   100% {
     -webkit-transform: scale(1) translateZ(0);
     transform: scale(1) translateZ(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

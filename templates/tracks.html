@@ -1,0 +1,123 @@
+{% extends "admin_base.html" %} {% block body %}
+<div class="tracks">
+  <div class="title">
+    <div class="title-wrapper">
+      <img
+        src="{{url_for('static',filename='assets/admin/track.svg')}}"
+        alt=""
+      />
+      <div class="tite-text">
+        <h2>Onboarding Tracks</h2>
+        <h4>Add an onboarding track for a specific job role</h4>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <form method="POST" class="shadow-sm" autocomplete="off" action="/tracks">
+    <div class="top-row">
+      <div>
+        <input
+          type="text"
+          name="role"
+          id="role"
+          class="form-control shadow-sm"
+          placeholder="Job Role"
+          aria-label="Job Role"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="space"></div>
+      <div>
+        <input
+          type="text"
+          name="slack"
+          id="slack"
+          class="form-control shadow-sm"
+          placeholder="Slack Team Channel Link"
+          aria-label="Slack Team Channel Link"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+      <div class="space"></div>
+      <div>
+        <input
+          type="text"
+          name="training"
+          id="training"
+          class="form-control shadow-sm"
+          placeholder="Training Link"
+          aria-label="Training Link"
+          aria-describedby="basic-addon3"
+        />
+      </div>
+    </div>
+    <div class="orientation">
+      <div>
+        <input
+          type="text"
+          name="orientation"
+          id="orientation"
+          class="form-control shadow-sm"
+          placeholder="Orientation Link"
+          aria-label="Orientation Link"
+          aria-describedby="basic-addon4"
+        />
+      </div>
+      <div class="space"></div>
+      <div>
+        <input
+          name="date"
+          id="date"
+          type="text"
+          onfocus="(this.type='datetime-local')"
+          class="form-control shadow-sm"
+          placeholder="Orientation Date"
+          aria-label="date"
+          aria-describedby="basic-addon5"
+        />
+      </div>
+    </div>
+    <button class="shadow-sm" type="submit">Add Onboarding Track</button>
+  </form>
+  <div class="title">
+    <div class="title-wrapper">
+      <img
+        src="{{url_for('static',filename='assets/admin/active.svg')}}"
+        alt=""
+      />
+      <div class="tite-text">
+        <h2>Active Tracks</h2>
+        <h4>View all active onboarding tracks</h4>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <table class="table shadow-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th class="px-5" scope="col">Track Name</th>
+        <th scope="col" class="px-5">Slack Link</th>
+        <th scope="col" class="px-5">Training Link</th>
+        <th scope="col" class="px-5">Orientation Link</th>
+        <th scope="col" class="px-5">Orientation Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for track in tracks %}
+      <tr>
+        <td class="px-5">{{track.role}}</td>
+        <td class="px-5"><a href="{{track.slack}}">{{track.slack}}</a></td>
+        <td class="px-5">
+          <a href="{{track.training}}">{{track.training}}</a>
+        </td>
+        <td class="px-5">
+          <a href="{{track.orientatio}}">{{track.orientation}}</a>
+        </td>
+        <td class="px-5">{{track.date}}, {{track.time}} hrs</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  <div class="end" style="margin: 10vh"></div>
+</div>
+{%endblock%}

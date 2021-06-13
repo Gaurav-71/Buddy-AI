@@ -1,0 +1,236 @@
+.title {
+  width: 100%;
+  color: #cc1543;
+}
+
+.title .title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title .title-wrapper img {
+  width: 90px;
+  height: 90px;
+  margin-right: 1.25rem;
+}
+
+.title .line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 2rem;
+  background: #919191;
+}
+
+.title h4 {
+  color: black;
+  font-size: medium;
+}
+
+.navbar-custom {
+  background: #1497a8;
+}
+
+.navbar-custom span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+}
+
+.navbar-custom .submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-custom .submenu .nav-item {
+  margin: auto 0.5rem;
+}
+
+.navbar-custom .submenu .nav-item:hover {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transform: scale(1.15) !important;
+          transform: scale(1.15) !important;
+  color: red !important;
+}
+
+body {
+  width: 100%;
+  min-height: 90vh;
+  background-image: linear-gradient(45deg, transparent 0%, transparent 2%, rgba(116, 116, 116, 0.04) 2%, rgba(116, 116, 116, 0.04) 36%, transparent 36%, transparent 100%), linear-gradient(0deg, transparent 0%, transparent 48%, rgba(116, 116, 116, 0.04) 48%, rgba(116, 116, 116, 0.04) 64%, transparent 64%, transparent 100%), linear-gradient(90deg, transparent 0%, transparent 70%, rgba(116, 116, 116, 0.04) 70%, rgba(116, 116, 116, 0.04) 73%, transparent 73%, transparent 100%), linear-gradient(90deg, transparent 0%, transparent 17%, rgba(116, 116, 116, 0.04) 17%, rgba(116, 116, 116, 0.04) 54%, transparent 54%, transparent 100%), linear-gradient(90deg, white, white);
+}
+
+.index-page {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15vh;
+}
+
+.index-page .card {
+  height: 25rem;
+  text-decoration: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70% 30%;
+      grid-template-rows: 70% 30%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, #040404, #4f4f4f);
+}
+
+.index-page .card img {
+  height: 17rem;
+  background: white;
+}
+
+.index-page .card .card-body .card-title {
+  color: #cc1543;
+  font-weight: bold;
+}
+
+.index-page .card .card-body .card-text {
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.index-page .card:hover {
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.employee {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  padding-top: 12vh;
+}
+
+.employee form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 2% 45% 2% 6%;
+      grid-template-columns: 45% 2% 45% 2% 6%;
+}
+
+.employee form button {
+  outline: none;
+  border: none;
+  background: #5ec070;
+  color: white;
+}
+
+.employee table thead {
+  background-image: repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, #040404, #4f4f4f);
+  color: white;
+}
+
+.employee table tbody {
+  background: white;
+}
+
+.tracks {
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 0 2rem;
+  padding-top: 12vh;
+}
+
+.tracks form {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(233, 233, 233, 0.8);
+  margin-bottom: 2rem;
+}
+
+.tracks form .top-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% auto 32% auto 32%;
+      grid-template-columns: 32% auto 32% auto 32%;
+}
+
+.tracks form .orientation {
+  margin: 1.5rem 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 2% 18%;
+      grid-template-columns: 80% 2% 18%;
+}
+
+.tracks form button {
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  background: #5ec070;
+  color: white;
+}
+
+.tracks table {
+  margin-top: 2rem;
+}
+
+.tracks table thead {
+  background-image: repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, #040404, #4f4f4f);
+  color: white;
+}
+
+.tracks table tbody {
+  background: white;
+}
+/*# sourceMappingURL=admin.css.map */

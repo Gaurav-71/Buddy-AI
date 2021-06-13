@@ -1,0 +1,63 @@
+{% extends "admin_base.html" %} {% block body %}
+
+<div class="employee">
+  <div class="title">
+    <div class="title-wrapper">
+      <img src="{{url_for('static',filename='assets/admin/emp.svg')}}" alt="" />
+      <div class="tite-text">
+        <h2>Add Employee</h2>
+        <h4>Create a unique ID for a new employee and assign a job role</h4>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <form method="POST" action="/employee">
+    <div>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control shadow-sm"
+        placeholder="Employee Name"
+        aria-label="Employee Name"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="space"></div>
+    <div>
+      <input
+        type="text"
+        name="role"
+        id="role"
+        class="form-control shadow-sm"
+        placeholder="Job Role"
+        aria-label="job Role"
+        aria-describedby="basic-addon2"
+      />
+    </div>
+    <div class="space"></div>
+    <button class="shadow-sm" type="submit">Add</button>
+  </form>
+  <table class="table shadow-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th class="px-5" scope="col">Name</th>
+        <th scope="col" class="px-5">Job Role</th>
+        <th scope="col" class="px-5">UID</th>
+        <th scope="col" class="px-5">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for emp in employees %}
+      <tr>
+        <td class="px-5">{{emp.name}}</td>
+        <td class="px-5">{{emp.role}}</td>
+        <td class="px-5">{{emp.id}}</td>
+        <td class="px-5">{{emp.email}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{%endblock%}

@@ -3,17 +3,25 @@
     {% for message in messages %} {% if message.sender == "user" %}
     <div class="mine messages">
       {% if message.mtype == "list" %} {% for item in message.message %}
-      <div class="message last shadow-sm">{{item}}</div>
+      <div class="message last shadow-sm animate__animated animate__headShake">
+        {{item}}
+      </div>
       {%endfor%} {%else%}
-      <div class="message last shadow-sm">{{message.message}}</div>
+      <div class="message last shadow-sm animate__animated animate__headShake">
+        {{message.message}}
+      </div>
       {%endif%}
     </div>
     {% else %}
     <div class="yours messages">
       {% if message.mtype == "list" %} {% for item in message.message %}
-      <div class="message last shadow-sm">{{item}}</div>
+      <div class="message last shadow-sm animate__animated animate__headShake">
+        {{item}}
+      </div>
       {%endfor%} {%else%}
-      <div class="message last shadow-sm">{{message.message}}</div>
+      <div class="message last shadow-sm animate__animated animate__headShake">
+        {{message.message}}
+      </div>
       {%endif%}
     </div>
     {% endif %} {%endfor%}
@@ -30,7 +38,13 @@
         aria-label="Type a message"
         aria-describedby="basic-addon1"
       />
-      <button type="submit" class="input-group-text" id="basic-addon1">
+      <button
+        type="submit"
+        name="b0"
+        value="query-submit"
+        class="input-group-text"
+        id="basic-addon1"
+      >
         <img
           src="{{url_for('static',filename='assets/send.svg')}}"
           alt="send-btn"
@@ -38,9 +52,69 @@
       </button>
     </div>
   </form>
-  <div class="suggestions">
-    <span class="badge rounded-pill bg-secondary">Secondary</span
-    ><span class="badge rounded-pill bg-secondary">Secondary</span
-    ><span class="badge rounded-pill bg-secondary">Secondary</span>
-  </div>
+  <form method="POST" action="/chats" class="suggestions">
+    <a>Suggestions</a><a>:</a>
+    <button
+      type="submit"
+      name="b1"
+      value="Onboard me"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      Onboard me</button
+    ><button
+      type="submit"
+      name="b2"
+      value="View Team & Team Mates"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      View Team & Team Mates</button
+    ><button
+      type="submit"
+      name="b3"
+      value="About Unisys"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      About Unisys
+    </button>
+    <button
+      type="submit"
+      name="b4"
+      value="Latest News"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      Latest News
+    </button>
+    <button
+      type="submit"
+      name="b5"
+      value="Nearby Restaurants"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      Nearby Restaurants
+    </button>
+    <button
+      type="submit"
+      name="b6"
+      value="My Email"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      Generate My Email
+    </button>
+    <button
+      type="submit"
+      name="b7"
+      value="Join Team Slack Channel"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      Join Team Slack Channel
+    </button>
+    <button
+      type="submit"
+      name="b8"
+      value="unisys.com"
+      class="badge rounded-pill bg-secondary shadow-sm"
+    >
+      Visit unisys.com
+    </button>
+  </form>
 </div>
