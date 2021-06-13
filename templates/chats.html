@@ -3,25 +3,17 @@
     {% for message in messages %} {% if message.sender == "user" %}
     <div class="mine messages">
       {% if message.mtype == "list" %} {% for item in message.message %}
-      <div class="message last shadow-sm animate__animated animate__headShake">
-        {{item}}
-      </div>
+      <div class="message last shadow-sm">{{item}}</div>
       {%endfor%} {%else%}
-      <div class="message last shadow-sm animate__animated animate__headShake">
-        {{message.message}}
-      </div>
+      <div class="message last shadow-sm">{{message.message}}</div>
       {%endif%}
     </div>
     {% else %}
     <div class="yours messages">
       {% if message.mtype == "list" %} {% for item in message.message %}
-      <div class="message last shadow-sm animate__animated animate__headShake">
-        {{item}}
-      </div>
+      <div class="message last shadow-sm">{{item}}</div>
       {%endfor%} {%else%}
-      <div class="message last shadow-sm animate__animated animate__headShake">
-        {{message.message}}
-      </div>
+      <div class="message last shadow-sm">{{message.message}}</div>
       {%endif%}
     </div>
     {% endif %} {%endfor%}
@@ -98,7 +90,7 @@
       value="My Email"
       class="badge rounded-pill bg-secondary shadow-sm"
     >
-      Generate My Email
+      Show My Email
     </button>
     <button
       type="submit"

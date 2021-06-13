@@ -1,0 +1,25 @@
+{% extends "admin_base.html" %} {% block body %}
+<div class="login">
+  <div class="card shadow-lg" style="width: 20rem">
+    <img
+      class="card-img-top p-5"
+      src="{{url_for('static',filename='assets/admin/login.svg')}}"
+      alt="Card image cap"
+    />
+    <form method="POST" action="/login" class="card-body">
+      <div>
+        <input
+          type="text"
+          name="user"
+          id="user"
+          class="form-control shadow-sm"
+          placeholder="Enter UID"
+          aria-label="Enter UID"
+          aria-describedby="basic-addon100"
+        />
+      </div>
+      <button class="shadow-lg" type="submit">Login</button>
+    </form>
+  </div>
+</div>
+{%endblock%}

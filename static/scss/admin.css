@@ -233,4 +233,62 @@ body {
 .tracks table tbody {
   background: white;
 }
+
+.login {
+  padding-top: 15vh;
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login .card {
+  height: 27rem;
+  text-decoration: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70% 30%;
+      grid-template-rows: 70% 30%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.login .card img {
+  height: 19rem;
+  background: white;
+}
+
+.login .card .card-body {
+  height: 8.3rem;
+  background-image: repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.05) 0px, rgba(156, 156, 156, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, rgba(156, 156, 156, 0.08) 0px, rgba(156, 156, 156, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, #040404, #4f4f4f);
+}
+
+.login .card .card-body button {
+  outline: none;
+  border: none;
+  width: 100%;
+  background: #cc1543;
+  color: white;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.login .card .card-body .card-title {
+  color: #cc1543;
+  font-weight: bold;
+}
+
+.login .card .card-body .card-text {
+  color: white;
+  padding-bottom: 2rem;
+}
 /*# sourceMappingURL=admin.css.map */
